@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'carrierwave'
+
 gem 'rails_12factor'
 gem 'unicorn'
 gem 'oauth2'

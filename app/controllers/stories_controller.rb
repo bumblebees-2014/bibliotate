@@ -1,6 +1,5 @@
 class StoriesController < ApplicationController
-  def index
-  end
+  include TxtReaderConcern
 
   def show
     @story = Story.find(params[:id])
@@ -12,16 +11,17 @@ class StoriesController < ApplicationController
   end
 
   def create
-    if params[:story][:author] == ""
-      params[:story][:author] = "Unknown"
-    end
-    if params[:course_id] == "" || params[:story][:title] == ""
-      flash[:messages] = "Please be sure your story has a title and a course"
+    # body = read_txt(params[:story_file]) ||
+    body = params[:story_body]
+    @story = Story.from_body(body)
+    @story.assign_attributes(story_params)
+
+    if @story.save
+      redirect_to @story
+    else
+      flash[:messages] = @story.errors.messages.first
       redirect_to new_story_path
-#      flash[:messages] = @story.errors.full_messages <<-- uses validation messages from activerecord
     end
-    @story = Story.make(params[:story][:title],params[:story][:author],params[:story_body],params[:course_id])
-    redirect_to @story
   end
 
   def destroy
@@ -42,6 +42,12 @@ class StoriesController < ApplicationController
   def active_users
     @story = Story.find(params[:id])
     render partial: 'active_users'
+  end
+
+  private
+
+  def story_params
+    params.require(:story).permit([:title, :author, :course_id, :file, :remote_file_url])
   end
 
 end

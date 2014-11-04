@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include OAuthHelper
 
   def index
     @notifications = Notification.where(user_id:current_user)
@@ -14,19 +15,7 @@ class UsersController < ApplicationController
     redirect_to '/'
   end
 
-
 # Oauth/Signup routes
-
-  CLIENT_ID = "336184733554-fpkrdqv8iis7hfifcoq6rq2b4ln3kn4c.apps.googleusercontent.com"
-  CLIENT_SECRET = "_MYiDzimywN_PUPp-2VyWuXM"
-
-  def client
-    client ||= OAuth2::Client.new(CLIENT_ID, CLIENT_SECRET, {
-              :site => 'https://accounts.google.com',
-              :authorize_url => "/o/oauth2/auth",
-              :token_url => "/o/oauth2/token"
-            })
-  end
 
   def auth
     redirect_to client.auth_code.authorize_url(:redirect_uri => 'https://bibliotate.herokuapp.com/callback',:scope => 'https://www.googleapis.com/auth/userinfo.email',:access_type => "offline")

@@ -1,12 +1,20 @@
 <div class="storycreate">
-<h2>Please fill out the form below:</h2>
-<%= form_for(@story) do |f| %>
-  <%= f.text_field :title, placeholder: "Title", data: {field: "title"} %><br>
-  <%= f.text_field :author, placeholder: "Author", data: {field: "author"} %><br>
-  <%= render partial: 'course_dropdown', :locals => {:courses => @courses } %><br>
-<textarea placeholder="Paste your story here" class="new_story_body" name="story_body"rows="50" cols="100">
-</textarea>
-<br>
-  <%= button_tag(type: "submit", :class => "newstorybutton") {content_tag(:strong, "Post!" )}%>
-<% end %>
+  <h2>Please fill out the form below:</h2>
+  <%= form_for @story, html: {multipart: true} do |f| %>
+    <%= f.text_field :title, placeholder: "Title", data: {field: "title"} %><br>
+    <%= f.text_field :author, placeholder: "Author", data: {field: "author"} %><br>
+    <%= render partial: 'course_dropdown', :locals => {:courses => @courses } %><br>
+    <%= f.label :text_file, "Upload a story (.txt only)" %>
+    <%= f.file_field :text_file %><br>
+    <p>Or paste your story here:</p>
+    <textarea placeholder="Paste your story here" class="new_story_body" name="story_body"rows="5" cols="10">
+    </textarea><br>
+
+
+    <%= f.label :file, "Upload an image" %>
+    <%= f.file_field :file %><br>
+    <%= f.label :remote_file_url, "or use an image URL" %>
+    <%= f.text_field :remote_file_url %><br>
+    <%= button_tag(type: "submit", :class => "newstorybutton") {content_tag(:strong, "Post!" )}%>
+  <% end %>
 </div>
