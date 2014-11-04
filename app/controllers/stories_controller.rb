@@ -1,5 +1,4 @@
 class StoriesController < ApplicationController
-  include StoryHelper
   def index
   end
 
