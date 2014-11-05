@@ -1,6 +1,7 @@
 module TxtReaderConcern
-  def self.read_txt(file)
-
+  def read(file)
+    return nil unless file
+    body = File.open(file, 'r')
+    body.read
   end
-
 end

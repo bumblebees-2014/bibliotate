@@ -10,9 +10,20 @@ class StoriesController < ApplicationController
     @story = Story.new
   end
 
+
   def create
-    # body = read_txt(params[:story_file]) ||
-    body = params[:story_body]
+    file = params[:story][:text_file]
+    if file
+      if file.content_type == "application/pdf"
+        body = PDF::Reader.open(file.tempfile) do |reader|
+          reader.pages.map {|page| page.text }.join(' ')
+        end
+      else
+        body = file.read
+      end
+    else
+      body = params[:story_body]
+    end
     @story = Story.from_body(body)
     @story.assign_attributes(story_params)
 
