@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20141104135612) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "file"
+    t.string   "text_file"
   end
 
   create_table "users", force: true do |t|
