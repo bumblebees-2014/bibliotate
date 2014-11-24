@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'carrierwave'
+gem 'pdf-reader'
+
 gem 'rails_12factor'
 gem 'unicorn'
 gem 'oauth2'

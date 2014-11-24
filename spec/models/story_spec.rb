@@ -19,6 +19,12 @@ RSpec.describe Story, :type => :model do
     end
   end
 
+  describe "#ignore_unnecessary_line_breaks" do
+    it "it ignore's unnecessary line breaks properly" do
+
+    end
+  end
+
   describe "custom make functions" do
     it "should make a new story" do
       size_before = Story.all.size

@@ -188,33 +188,6 @@ main {
 
 /* STORY PAGE --------------------------------- */
 
-#story_author {
-  font-family: 'Source Serif Pro', serif;
-  color: #5D5050;
-  text-align: center;
-  margin: 0;
-  width: 30%;
-  height: 5%;
-  margin: 1%;
-  margin-left: 35%;
-  height: 20px;
-  font-size: 1em
-}
-
-#story_title {
-  font-family: 'Source Serif Pro', serif;
-  font-weight: 700;
-  font-size: 3.5em;
-  color: #5D5050;
-  font-style: georgia, serif;
-  text-align: center;
-  margin: 55px 27% 20px;
-}
-
-#author {
-  color: #cc6b58;
-}
-
 #story_info {
   text-align: center;
   font-size: 1.3em;
@@ -303,52 +276,14 @@ main {
 
 .storycreate h2 {
   font-size: 2em;
-   font-family: georgia, serif;
-   text-align: center;
-  margin-left: 35%;
-
+  font-family: georgia, serif;
 }
 
-#story_author{
-  text-align: center;
-  margin: 0;
-  width: 30%;
-  height: 5%;
-  margin: 1%;
-  margin-left: 35%;
-  height: 20px;
-   font-family: georgia, serif;
-  font-size: 1em
-}
 
 .story_create h2 {
   font-size: 1em;
   font-color:red;
 }
-
-.new_story_body{
-  width: 100%;
-  height: 5%;
-  margin: 1%;
-   font-family: georgia, serif;
-  font-size: 1em
-}
-
-.coursedropdown {
-   text-align: center;
-  width: 30%;
-  height: 5%;
-  margin: 1%;
-   font-family: georgia, serif;
-  margin-left: 35%;
-}
-
-.newstorybutton {
-   font-family: georgia, serif;
-  margin-left: 35%;
-  width: 30%; /*basic styles*/ width: 250px; height: 50px; color: white; background-color: #d46d45; text-align: center; font-size: 30px; line-height: 50px; /*gradient styles*/ background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d46d45), to(#b1432a)); background: -moz-linear-gradient(19% 75% 90deg,#b1432a, #d46d45); /*border styles*/ border-top: solid 2px #e28d79; border-bottom: solid 1px #51281f; border-right: solid 1px #d46d45; border-left: solid 1px #d46d45; -moz-border-radius: 30px; -webkit-border-radius: 30px; border-radius: 30px; } .newstorybutton p { font-size: 25px; line-height: 50px; font-family: ‘Trebuchet MS’, sans-serif; } a { text-decoration: none; color: fff; } .newstorybutton:hover { background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b1432a), to(#d46d45)); background: -moz-linear-gradient(19% 75% 90deg,#d46d45, #b1432a); border-top: solid 2px #b1432a; border-bottom: solid 1px #e28d79; }
-
-
 
 /* SPLASH PAGE --------------------------------- */
 
@@ -523,7 +458,15 @@ ul {
   padding:0;
 }
 
+.story-photo {
+  display: block;
+  width: auto;
+  margin: auto;
+  height: 300px;
+  width: 300px;
+}
 
-
-
+.photo-with-caption {
+  text-align: center;
+}
 
