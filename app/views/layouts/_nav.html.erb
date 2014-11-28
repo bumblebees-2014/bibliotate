@@ -13,17 +13,17 @@
           <section id="login_box">
             <a href="/auth">
               <section id="google_plus"><i class="fa fa-google-plus"></i></section>
+            <span id="login_with_text">Login With</span>  
             </a>
-            <span id="login_with_text">Login With</span>
           </section>
 
         <% elsif current_user.role == "teacher" %>
           <section id="login_box">
             <%= link_to  logout_path, :method => 'post' do %>
               <section id="google_plus"><i class="fa fa-google-plus"></i></section>
-            <% end  %>
             <span id="login_with_text">Logout With</span>
           </section>
+            <% end  %>
 
           <section id="notification_partial">
             <%= render partial: "users/notification", :locals => {:notifications => current_user.notifications.limit(5).order(created_at: :desc)} %>
@@ -52,9 +52,9 @@
           <section id="login_box">
             <%= link_to  logout_path, :method => 'post' do %>
               <section id="google_plus"><i class="fa fa-google-plus"></i></section>
-            <% end  %>
             <span id="login_with_text">Logout With</span>
           </section>
+            <% end  %>
 
           <section id="nav-name">
             <%= link_to "#{current_user.name}", user_path(current_user) %>

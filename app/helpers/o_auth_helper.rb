@@ -1,4 +1,5 @@
 module OAuthHelper
+
   CLIENT_ID = ENV['CLIENT_ID']
   CLIENT_SECRET = ENV['CLIENT_SECRET']
 
