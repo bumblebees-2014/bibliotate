@@ -1,7 +1,7 @@
 module OAuthHelper
 
-  CLIENT_ID = ENV['CLIENT_ID']
-  CLIENT_SECRET = ENV['CLIENT_SECRET']
+  CLIENT_ID = ENV["CLIENT_ID"]
+  CLIENT_SECRET = ENV["CLIENT_SECRET"]
 
   def client
     client ||= OAuth2::Client.new(CLIENT_ID, CLIENT_SECRET, {

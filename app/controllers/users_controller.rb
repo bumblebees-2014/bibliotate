@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 # Oauth/Signup routes
 
   def auth
-    redirect_to client.auth_code.authorize_url(:redirect_uri => 'http://localhost:3000/callback',:scope => 'https://www.googleapis.com/auth/userinfo.email',:access_type => "offline")
+    redirect_to client.auth_code.authorize_url(:redirect_uri => 'https://bibliotate.herokuapp.com/callback',:scope => 'https://www.googleapis.com/auth/userinfo.email',:access_type => "offline")
   end
 
   def callback
