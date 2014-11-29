@@ -69,50 +69,50 @@ p {
 
 
 /*
- * -- PRICING TABLE WRAPPER --
- * This element wraps up all the pricing table elements
+ * -- INFO TABLE WRAPPER --
+ * This element wraps up all the info table elements
  */
- .pricing-tables,
+ .info-tables,
  .information {
     max-width: 980px;
     margin: 0 auto;
  }
-.pricing-tables {
+.info-tables {
     margin-bottom: 3.125em;
     text-align: center;
 }
 
 /*
- * -- PRICING TABLE  --
- * Every pricing table has the .pricing-table class
+ * -- INFO TABLE  --
+ * Every info table has the .info-table class
  */
-.pricing-table {
+.info-table {
     border: 1px solid #ddd;
     margin: 0 0.5em 2em;
     padding: 0 0 3em;
 }
 
 /*
- * -- PRICING TABLE HEADER COLORS --
- * Choose a different color based on the type of pricing table.
+ * -- INFO TABLE HEADER COLORS --
+ * Choose a different color based on the type of info table.
  */
-.pricing-table-free .pricing-table-header {
+.info-table-free .info-table-header {
     background: #519251;
 }
 
-.pricing-table-biz .pricing-table-header {
+.info-table-biz .info-table-header {
     background: #2c4985;
 }
 
 /*
- * -- PRICING TABLE HEADER --
+ * -- INFO TABLE HEADER --
  * By default, a header is black/white, and has some styles for its <h2> name.
  */
-.pricing-table-header {
+.info-table-header {
     background: #111;
     color: #fff;
 }
-    .pricing-table-header h2 {
+    .info-table-header h2 {
         margin: 0;
         padding-top: 2em;
         font-size: 1em;
@@ -122,15 +122,15 @@ p {
 
 
 /*
- * -- PRICING TABLE PRICE --
+ * -- INFO TABLE PRICE --
  * Styles for the price and the corresponding <span>per month</span>
  */
-.pricing-table-price {
+.info-table-price {
     font-size: 6em;
     margin: 0.2em 0 0;
     font-weight: 100;
 }
-    .pricing-table-price span {
+    .info-table-price span {
         display: block;
         text-transform: uppercase;
         font-size: 0.2em;
@@ -143,10 +143,10 @@ p {
 
 
 /*
- * -- PRICING TABLE LIST --
- * Each pricing table has a <ul> which is denoted by the .pricing-table-list class
+ * -- INFO TABLE LIST --
+ * Each info table has a <ul> which is denoted by the .info-table-list class
  */
-.pricing-table-list {
+.info-table-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -155,10 +155,10 @@ p {
 
 
 /*
- * -- PRICING TABLE LIST ELEMENTS --
- * Styles for the individual list elements within each pricing table
+ * -- INFO TABLE LIST ELEMENTS --
+ * Styles for the individual list elements within each info table
  */
-.pricing-table-list li {
+.info-table-list li {
     padding: 0.8em 0;
     background: #f7f7f7;
     border-bottom: 1px solid #e7e7e7;
@@ -166,8 +166,8 @@ p {
 
 
 /*
- * -- PRICING TABLE BUTTON --
- * Styles for the "Choose" button at the bottom of a pricing table.
+ * -- INFO TABLE BUTTON --
+ * Styles for the "Choose" button at the bottom of a info table.
  * This inherits from Pure Button.
  */
 .button-choose {
@@ -195,18 +195,28 @@ p {
     }
 
 
+.info-table-price {
+    font-family: 'Source Serif Pro', serif
+}
+.info-table-list {
+    font-family: 'Source Serif Pro', serif
+}
+/*.button-choose pure-button{
+       font-family: 'Source Serif Pro', serif
+}
+*/
 
 /*
  * -- TABLET MEDIA QUERIES --
  * On tablets, we want to slightly adjust the size of the banner
- * text and add some vertical space between the various pricing tables
+ * text and add some vertical space between the various info tables
  */
 @media(min-width: 767px) {
 
     .banner-head {
         font-size: 4em;
     }
-    .pricing-table {
+    .info-table {
         margin-bottom: 0;
     }
 
@@ -224,3 +234,4 @@ p {
         font-size: 3em;
     }
 }
+

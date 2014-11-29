@@ -2,12 +2,8 @@
 <html>
 <head>
   <title>Bibliotate</title>
-  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all'%>
   <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
@@ -17,15 +13,15 @@
 <%= render partial:'/layouts/nav' %>
 <%= render partial:'/layouts/messages' %>
 
-<section id="container" class="container-fluid">
+<!-- <section id="container" class="container-fluid">
   <section class="border outer">
-    <section class="border inner">
+    <section class="border inner"> -->
       <main>
         <%= yield %>
       </main>
-    </section>
+<!--     </section>
   </section>
 </section>
-
+ -->
 </body>
 </html>
