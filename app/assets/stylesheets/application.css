@@ -20,7 +20,6 @@ body {
   padding: 0 10px 10px;
 }
 
-
 /* NAVIGATION PARTIAL --------------------------------- */
 
 header {
@@ -37,7 +36,7 @@ header {
   height: 40px;
   margin: 7px 0 0;
   display: block;
-  color: #AFC0BE;
+  
   float: left;
 }
 
@@ -45,7 +44,7 @@ header {
   margin: 10px 0 0 10px;
   text-decoration: none;
   font-size: 1.8em;
-  color: #AFC0BE;
+  
   font-family: 'Pacifico', cursive;
 }
 
@@ -57,17 +56,20 @@ header {
 #login_box {
   display: block;
   float: right;
-  color: white;
+  color: black;
 }
 
 #login_box a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 #login_box a:hover {
   text-decoration: underline;
-  color: #7A6A53;
+  color: grey;
+}
+#google_plus{
+  color: white;
 }
 
 #login_box i {
@@ -79,7 +81,7 @@ header {
   width: auto;
   display: block;
   float: right;
-  color: #AFC0BE;
+  
   font-size: 1em;
   font-family: georgia, serif;
   height: 30px;
@@ -97,7 +99,7 @@ header {
 }
 
 #hello_user {
-  color: #AFC0BE;
+  
   font-size: 1em;
   /*font-family: georgia, serif;*/
 }
@@ -113,28 +115,28 @@ header {
 
 #nav-teacher {
   margin: 16px 10px 0 0;
-  color: #AFC0BE;
+  
   float: right;
   color: white;
 }
 
 #nav-student {
   margin: 16px 10px 0 0;
-  color: #AFC0BE;
+  
   float: right;
   color: white;
 }
 
 #nav-add-story, #nav-view-hashtags{
   margin: 16px 10px 0 0;
-  color: #AFC0BE;
+  
   float: right;
   color: white;
 }
 
 #nav-teacher a, #nav-student a,
 #nav-add-story a, #nav-view-hashtags a {
-  color: #AFC0BE;
+  
 }
 
 
@@ -354,7 +356,7 @@ main {
 .comments {
   float: right;
   margin: 0 20px 0 0;
-  color: #AFC0BE;
+  
 }
 
 
@@ -397,7 +399,6 @@ main {
   float: right;
   margin: 10px 10px 0 0;
   list-style-type: none;
-  color:#AFC0BE;
 }
 
 .dropdown-menu{

@@ -1,46 +1,42 @@
 <div class="pure-menu pure-menu-open pure-menu-horizontal">
-  <a href="/" class="pure-menu-heading">Home</a>
-  <% if current_user == nil %>
   <ul>
+  <li><a href="/">Home</a></li>
+  </ul>
+  <% if current_user == nil %>
+  <ul style="float:right">
     <li>
-      <section class="loginbox">
       <%= link_to  auth_path do %>
-        <span class="text-container">
-          Login with <i class="fa fa-google-plus"></i>
-        </span>
-      </section>
+      <img src="https://developers.google.com/+/images/branding/sign-in-buttons/Red-signin_Long_base_44dp.png" style="width: 182px; height: 40px; ">
       <% end  %>
     </li>
-  </ul>
-
+</ul>
   <% elsif current_user.role == "teacher" %>
-  <section id="login_box">
-    <%= link_to  logout_path, :method => 'post' do %>
-    <section id="google_plus"><i class="fa fa-google-plus"></i></section>
-    <span id="login_with_text">Logout With</span>
-  </section>
-  <% end  %>
 
-  <section id="notification_partial">
-    <%= render partial: "users/notification", :locals => {:notifications => current_user.notifications.limit(5).order(created_at: :desc)} %>
-  </section>
-
-  <section id="nav-name">
+  <li>
     <%= link_to "#{current_user.name}", user_path(current_user) %>
-  </section>
+  </li>
 
-
-  <section id="nav-add-story" class="nav_buttons">
+  <li>
     <a href="/stories/new">Story+ <span id="book_icon" class="entypo-book-open"></span></a>
-  </section>
+  </li>
 
-  <section id="nav-teacher" class="nav_buttons">
+  <li>
     <a href="/courses/new">Course+ <span id="course_icon" class="entypo-doc-text"></span></i></a>
-  </section>
+  </li>
 
-  <section id="nav-view-hashtags" class="nav_buttons">
+  <li>
     <a href="/hashtags">Trending </a>
-  </section>
+  </li>
+  
+  <li id="notification_partial">
+    <%= render partial: "users/notification", :locals => {:notifications => current_user.notifications.limit(5).order(created_at: :desc)} %>
+  </li>
+
+  <li>
+    <%= link_to  logout_path, :method => 'post' do %>
+    <img src="http://i.stack.imgur.com/I3NM6.png" style="width: 120px; height: 40px;">
+  <% end  %>
+  </li>
   <% else %>
 
   <section id="login_box">
@@ -64,4 +60,5 @@
 
 
   <% end %>  
+  <!-- </ul> -->
 </div>
