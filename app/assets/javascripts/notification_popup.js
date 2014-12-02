@@ -1,6 +1,6 @@
 $( document ).ready(function() {
-  $(".dropdown.open").on('click', function() {
-    $(".dropdown-menu").toggle()
+  $(".pure-menu-children").hover( function() {
+      console.log("ok");
     $.ajax({
       url: '/notifications',
       type: 'POST',
