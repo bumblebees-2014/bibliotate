@@ -26,6 +26,9 @@ body {
 
 /* STORY PAGE --------------------------------- */
 
+.commented{
+  background-color: red;
+}
 #story_info {
   text-align: center;
   font-size: 1.3em;
@@ -231,37 +234,7 @@ body {
 
 /*pertains to notification box*/
 
-.dropdown {   /*The issue with the nav space is here*/
-  float: right;
-  margin: 10px 10px 0 0;
-  list-style-type: none;
-}
 
-.dropdown-menu{
-  left: -100%;
-}
-.dropdown ul li{
-  float: left;
-  margin-right:600px;
-  list-style-type: none;
-}
-
-#user_information {
-  text-align: center;
-  margin: 10px 0;
-  overflow: auto;
-}
-
-#user_information li {
-  text-align: center;
-  list-style-type: none;
-  font-size: 1.5em;
-}
-
-#newnotify{
-  color:#EC7961;
-  font-size: 1em;
-}
 .removestudent{
   float:right;
 }

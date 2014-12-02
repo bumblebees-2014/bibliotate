@@ -1,5 +1,5 @@
-<h1>Welcome, <%= current_user.name %></h1>
-<h4><%= current_user.role.capitalize %></h4>
+<!-- <h1>Welcome, <%= current_user.name %></h1>
+<h4><%= current_user.role.capitalize %></h4> -->
 
   <%= render partial: '/users/teachers/all_courses' %>
   <% current_user.taught_courses.each do |course| %>
