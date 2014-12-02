@@ -4,13 +4,13 @@
 		<div class="pure-menu pure-menu-open pure-menu-horizontal">
 			<ul>
 				<li class="pure-menu-selected"><a href="#"><%=course.name%></a></li>
-				<li><a href="#">Flickr</a></li>
-				<li><a href="#">Messenger</a></li>
-				<li><a href="#">Finance</a></li>
+				<li><a href="#">Stories</a></li>
+				<li><a href="#">Recent Comments</a></li>
+					<li><%= button_to "Delete this course", course_path(id: course.id), method: :delete, data: {confirm: 'NOTICE: This course will be deleted. Are you sure? '}, class: "pure-button button-error" %></li>
 			</ul>
 		</div>
 		<%= render partial: '/users/teachers/all_students', locals: {students: course.users, course_id: course.id}  %>
-		<%= link_to "Delete this course", course_path(id: course.id), method: :delete, data: {confirm: 'NOTICE: This course will be deleted. Are you sure? '} %>
+	
 	</div>
 	<% if course.stories.size > 0 %>
 		<div class="stories_for_class" hidden><%= render partial: '/users/teachers/all_stories',  locals: {stories: course.stories} %></div>

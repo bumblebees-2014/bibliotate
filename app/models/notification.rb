@@ -23,11 +23,12 @@ class Notification < ActiveRecord::Base
 
   def is_about
     downcased_noteable_type = self.noteable_type.downcase
-    notification_removed = Comment.find(self.noteable_id).sentence
-    if notification_removed == nil
-      "Notification Removed"
-    elsif downcased_noteable_type == "comment"
-      Comment.find(self.noteable_id).sentence.paragraph.story.title
+    if downcased_noteable_type == "comment" 
+      if Comment.find(self.noteable_id).sentence == nil
+        "Notification Removed"
+      else  
+        Comment.find(self.noteable_id).sentence.paragraph.story.title
+      end
     else
       Course.find(Enrollment.find(self.noteable_id).course_id).name
     end
@@ -43,8 +44,5 @@ class Notification < ActiveRecord::Base
       "#{self.applies_to_user} joined #{self.is_about}"
     end
   end
-
-
-
 
 end
