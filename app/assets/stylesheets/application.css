@@ -259,7 +259,7 @@ body {
   margin-bottom: 5px;
 }
 
-ul {
+ul, li {
   list-style: none;
 }
 
