@@ -25,6 +25,7 @@ class Notification < ActiveRecord::Base
     downcased_noteable_type = self.noteable_type.downcase
     if downcased_noteable_type == "comment" 
       if Comment.find(self.noteable_id).sentence == nil
+        self.destroy
         "Notification Removed"
       else  
         Comment.find(self.noteable_id).sentence.paragraph.story.title

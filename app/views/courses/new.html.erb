@@ -1,16 +1,12 @@
-<div id="course-form-container">
-
-  <%= form_for :course, url: courses_path, method: :post do |f| %>
-
-    <div>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-    </div>
-
-    <div>
-      <%= f.submit "Create Course" %>
-    </div>
-
-  <% end %>
-
+<div class="new_course_form">
+<form class="pure-form" style:"margin:100px">
+	<fieldset>
+		<%= form_for :course, url: courses_path, method: :post, class:"pure-form" do |f| %>
+		<%= f.text_field :name, placeholder: "Course Name", class:"pure-input-1-2"%>
+		<br>
+		<br>
+		<%= f.submit "Create Course", class:"pure-button pure-button-primary" %>
+		<% end %>
+	</fieldset>
+</form>
 </div>

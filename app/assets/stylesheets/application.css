@@ -155,7 +155,7 @@ body {
 }
 
 .card {
-  width: 90%;
+  width: 94%;
   margin: 3%;
   height: 400px;
   background-color: #1f8dd6;
@@ -195,9 +195,10 @@ body {
   
 }
 
-
-
 /* PROFILE PAGE --------------------------------- */
+.new_course_form{
+  text-align: center
+}
 
 #profile_header {
   text-align: center;
@@ -227,14 +228,14 @@ body {
   text-align: center;
 }
 
-
-
-/*pertains to notification box*/
-
-
 .removestudent{
   float:right;
 }
+
+.pure-menu-children{
+  z-index: 100 !important;
+}
+
 .hover-text {
   color: black;
   margin: 2px 0 0 0px;

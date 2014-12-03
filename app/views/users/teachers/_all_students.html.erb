@@ -1,8 +1,7 @@
 <ul class="student_roster">
   <% students.each do |student|  %>
-  <% enrollment = Enrollment.find_by(user_id:student,course_id:course_id) %>
-      <img class="student_image img-circle" src="
-         <%= student.photo %>">
+  <li><% enrollment = Enrollment.find_by(user_id:student,course_id:course_id) %>
+      <img class="student_image img-circle" src="<%= student.photo %>">
       </img>
      <%= link_to "#{student.name}",  student %>
      <%= button_to "Remove Student", enrollment_path(enrollment), class:"pure-button button-error", :method => :delete, data: {confirm: 'Are you sure you want to remove this student?'}%>
