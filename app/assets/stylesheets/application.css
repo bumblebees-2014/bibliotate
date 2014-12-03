@@ -117,19 +117,30 @@ body {
 
 .storycreate h2 {
   font-size: 2em;
-  font-family: georgia, serif;
+  font-family: 'sans-Serif', serif  
+
 }
 
+.storycreate {
+  text-align: center
+}
 
-.story_create h2 {
-  font-size: 1em;
-  font-color:red;
+#story_text_file {
+  margin-left: 10%
+}
+#story_file {
+  margin-left: 16%
+}
+
+.button-secondary {
+  background: rgb(66, 184, 221); /* this is a light blue */
 }
 
 /* SPLASH PAGE --------------------------------- */
 
 #splash_section {
   width: 100%;
+  vertical-align: center;
   text-align: center;
 
 }
@@ -259,22 +270,22 @@ ul {
 
 /*#videoplayer{
   width: 100%
-}*/
-#headline {
-  text-align: center;
-  margin:0;
-  padding:0;
-}
+  }*/
+  #headline {
+    text-align: center;
+    margin:0;
+    padding:0;
+  }
 
-.story-photo {
-  display: block;
-  width: auto;
-  margin: auto;
-  height: 300px;
-  width: 300px;
-}
+  .story-photo {
+    display: block;
+    width: auto;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+  }
 
-.photo-with-caption {
-  text-align: center;
-}
+  .photo-with-caption {
+    text-align: center;
+  }
 
