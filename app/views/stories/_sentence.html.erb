@@ -1,6 +1,11 @@
 <span id="<%= sentence.story_sentence %>" class="sentence 
-	<% if sentence.commented? %>
+	<% if sentence.comment_count >= 6 %>
+		commented3
+	<% elsif sentence.comment_count >= 3 %>
+		commented2
+	<% elsif sentence.comment_count > 0 %>
 		commented
+	<% else %>
 	<% end %>"
 	 data-id="<%=sentence.id%>">
 	<%= sentence.body%>

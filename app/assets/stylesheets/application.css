@@ -27,8 +27,22 @@ body {
 /* STORY PAGE --------------------------------- */
 
 .commented{
-  background-color: red;
+  color: #66BDFF;
 }
+.commented2{
+  color: #5555FE;
+}
+.commented3{
+  color: #3333C3;
+}
+
+#story_title {
+text-align: center;
+}
+#story_author {
+text-align: center;
+}
+
 #story_info {
   text-align: center;
   font-size: 1.3em;
@@ -38,7 +52,7 @@ body {
 }
 
 .paragraph {
-  margin: 0 8% 30px;
+  margin: 0 8% 10px;
 }
 
 .sentence {
@@ -50,7 +64,7 @@ body {
 }
 
 .sentence:hover {
-  background-color: yellow;
+  background-color: #FFD38F;
 }
 
 .popup {
