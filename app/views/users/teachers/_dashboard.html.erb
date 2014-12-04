@@ -16,7 +16,7 @@
 		<% if course.stories.size > 0 %>
 		<div data-id=<%=course.id%> class="stories_for_class" style="display: none;"><%= render partial: '/users/teachers/all_stories',  locals: {stories: course.stories} %>
 		</div>
-		<div data-id=<%=course.id%> class="comments_for_stories" style="display: none;"><%= render partial: '/stories/comments_feed',  locals: {story: course.stories.first} %></div>
+		<div data-id=<%=course.id%> class="comments_for_stories" style="display: none;"><%= render partial: '/users/teachers/teacher_comments_feed',  locals: {comments: course.recent_comments} %></div>
 		<% else %>
 		<div data-id=<%=course.id%> class="stories_for_class" style="display: none; margin: 5%" >
 			<a href="/stories/new">No Stories Yet, Add One! </a>

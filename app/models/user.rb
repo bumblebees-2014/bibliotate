@@ -18,4 +18,5 @@ class User < ActiveRecord::Base
   def is_teacher?
     self.role.downcase == "teacher"
   end
+
 end
