@@ -14,7 +14,7 @@ class Course < ActiveRecord::Base
 			comments_array << story.comments 
 		end
 		comments_array.flatten!
-		comments_array.sort_by &:created_at
+		comments_array.sort_by! &:created_at
+		comments_array.reverse[0..10]
 	end
-
 end

@@ -296,24 +296,30 @@ ul, li {
   overflow-y:scroll;
 }
 
-/*#videoplayer{
-  width: 100%
-  }*/
-  #headline {
-    text-align: center;
-    margin:0;
-    padding:0;
-  }
+#headline {
+  text-align: center;
+  margin:0;
+  padding:0;
+}
 
-  .story-photo {
-    display: block;
-    width: auto;
-    margin: auto;
-    height: 300px;
-    width: 300px;
-  }
+.story-photo {
+  display: block;
+  width: auto;
+  margin: auto;
+  height: 300px;
+  width: 300px;
+}
 
-  .photo-with-caption {
-    text-align: center;
-  }
+.photo-with-caption {
+  text-align: center;
+}
 
+.pure-table{
+  color:#EEEEEE;
+}
+
+.button-secondary {
+  background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+/* visited link */
