@@ -1,7 +1,8 @@
-<div class="card">
-	<h1>Uploaded Stories</h1>
+
+<ul>
 	<% stories.each do |story| %>
-	<%= link_to "#{story.title}", story_path(story) %> ---- <%= Course.find(story.course_id).name  %>
-	<%= button_to "Delete", story_path(story), :method => :delete, data: {confirm: 'NOTICE: All comments associated with this story will be lost. Are you sure? '}%>
+	<li><%= button_to "Delete Story", story_path(story), :method => :delete, data: {confirm: 'NOTICE: All comments associated with this story will be lost. Are you sure? '}, style:"float:right", class:"pure-button button-error" %></li>
+	<li><%= link_to "#{story.title}", story_path(story) %></li>
 	<% end %>
-</div>
+</ul>
+
