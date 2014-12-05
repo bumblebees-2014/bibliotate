@@ -14,179 +14,31 @@
 body {
   background-image: url('lightpaperfibers.png');
   background-repeat: repeat;
+  background-color: 
 }
 
 .container-fluid {
   padding: 0 10px 10px;
 }
 
-
-/* NAVIGATION PARTIAL --------------------------------- */
-
-header {
-  height: 50px;
-  background: #5D5050;
-}
-
-#top {
-  width: 100%;
-
-}
-
-#logo {
-  height: 40px;
-  margin: 7px 0 0;
-  display: block;
-  color: #AFC0BE;
-  float: left;
-}
-
-#logo a {
-  margin: 10px 0 0 10px;
-  text-decoration: none;
-  font-size: 1.8em;
-  color: #AFC0BE;
-  font-family: 'Pacifico', cursive;
-}
-
-#logo i {
-  margin: 0 -2px 0 0;
-  font-size: 1em;
-}
-
-#login_box {
-  display: block;
-  float: right;
-  color: white;
-}
-
-#login_box a {
-  text-decoration: none;
-  color: white;
-}
-
-#login_box a:hover {
-  text-decoration: underline;
-  color: #7A6A53;
-}
-
-#login_box i {
-  margin: 10px 0 0 4px;
-  font-size: 1.25em;
-}
-
-#login_with_text {
-  width: auto;
-  display: block;
-  float: right;
-  color: #AFC0BE;
-  font-size: 1em;
-  font-family: georgia, serif;
-  height: 30px;
-  margin: 16px 6px 0 0;
-}
-
-#google_plus {
-  display: block;
-  float: right;
-  margin: 8px 11px 0 0;
-  height: 33px;
-  width: 33px;
-  border-radius: 3px;
-  background: #EC7962;
-}
-
-#hello_user {
-  color: #AFC0BE;
-  font-size: 1em;
-  /*font-family: georgia, serif;*/
-}
-
-#nav-name {
-  float: right;
-  margin: 16px 10px 0 0;
-}
-
-#nav-name a {
-  color: #EC7962;
-}
-
-#nav-teacher {
-  margin: 16px 10px 0 0;
-  color: #AFC0BE;
-  float: right;
-  color: white;
-}
-
-#nav-student {
-  margin: 16px 10px 0 0;
-  color: #AFC0BE;
-  float: right;
-  color: white;
-}
-
-#nav-add-story, #nav-view-hashtags{
-  margin: 16px 10px 0 0;
-  color: #AFC0BE;
-  float: right;
-  color: white;
-}
-
-#nav-teacher a, #nav-student a,
-#nav-add-story a, #nav-view-hashtags a {
-  color: #AFC0BE;
-}
-
-
-#nav-view-hashtags {
-  margin: 16px 10px 0 0;
-  display: block;
-  float: right;
-}
-
-#notification_partial {
-  display: block;
-  float: left;
-}
-
-#notification_partial i {
-  margin: 8px 10px 0 0;
-}
-
-.nav_buttons {
-  margin: 13px 10px 0 0;
-}
-
-main {
-  font-family: 'Source Serif Pro', serif;
-  color: #5D5050;
-  width: 80%;
-  display: block;
-  margin: auto;
-  margin-top: 45px;
-  margin-bottom: 50px;
-}
-
-.outer {
-  border: 4px solid rgba(223,165,149,0.08);
-  border-radius: 4px;
-}
-
-.inner {
-  border: 3px solid rgba(175,192,190,0.1);
-  border-radius: 2px;
-  margin: 3px;
-  overflow: auto;
-}
-
-
-
-.commented {
-  border-bottom: 1px red dashed;
-}
-
-
 /* STORY PAGE --------------------------------- */
+
+.commented{
+  color: #66BDFF;
+}
+.commented2{
+  color: #5555FE;
+}
+.commented3{
+  color: #3333C3;
+}
+
+#story_title {
+  text-align: center;
+}
+#story_author {
+  text-align: center;
+}
 
 #story_info {
   text-align: center;
@@ -197,7 +49,7 @@ main {
 }
 
 .paragraph {
-  margin: 0 8% 30px;
+  margin: 0 8% 10px;
 }
 
 .sentence {
@@ -209,7 +61,16 @@ main {
 }
 
 .sentence:hover {
-  background-color: yellow;
+  background-color: #FFD38F;
+}
+.button-success {
+  background: rgb(28, 184, 65); /* this is a green */
+}
+.button-small {
+  font-size: 85%;
+}
+.button-xsmall {
+  font-size: 75%;
 }
 
 .popup {
@@ -220,8 +81,10 @@ main {
   top: 7%;
   left: 80%;
   width: 20%;
-  height: 800px;
-
+  height: 625px;
+}
+.popup h3{
+  text-align: center
 }
 
 .popup textarea {
@@ -276,19 +139,30 @@ main {
 
 .storycreate h2 {
   font-size: 2em;
-  font-family: georgia, serif;
+  font-family: 'sans-Serif', serif  
+
 }
 
+.storycreate {
+  text-align: center
+}
 
-.story_create h2 {
-  font-size: 1em;
-  font-color:red;
+#story_text_file {
+  margin-left: 10%
+}
+#story_file {
+  margin-left: 16%
+}
+
+.button-secondary {
+  background: rgb(66, 184, 221); /* this is a light blue */
 }
 
 /* SPLASH PAGE --------------------------------- */
 
 #splash_section {
   width: 100%;
+  vertical-align: center;
   text-align: center;
 
 }
@@ -314,29 +188,29 @@ main {
 }
 
 .card {
-  width: 32.40%;
+  width: 94%;
+  margin: 3%;
   height: 400px;
-  background-color: white;
+  background-color: #1f8dd6;
   border: 2px solid rgba(175,192,190,0.1);
   border-radius: 4px;
   padding: 1%;
-  margin: 40px .10% ;
-  margin-bottom: 10%;
-  box-shadow: 0px 2px 67px #555;
-  float: left;
   overflow-y: scroll;
 }
 
 .card ul {
   list-style: none;
 }
-
-.card h1 {
-  text-align: center;
+.student_roster a {
+  color: white;
 }
-.card h3 {
-  text-align: center;
-  font-size: 2em;
+
+.button-error {
+  background: rgb(202, 60, 60); /* this is a maroon */
+  float: right;
+}
+.postcomment {
+  margin-left: 23%;
 }
 
 .story_links {
@@ -354,12 +228,13 @@ main {
 .comments {
   float: right;
   margin: 0 20px 0 0;
-  color: #AFC0BE;
+  
 }
 
-
-
 /* PROFILE PAGE --------------------------------- */
+.new_course_form{
+  text-align: center
+}
 
 #profile_header {
   text-align: center;
@@ -389,45 +264,14 @@ main {
   text-align: center;
 }
 
-
-
-/*pertains to notification box*/
-
-.dropdown {   /*The issue with the nav space is here*/
-  float: right;
-  margin: 10px 10px 0 0;
-  list-style-type: none;
-  color:#AFC0BE;
-}
-
-.dropdown-menu{
-  left: -100%;
-}
-.dropdown ul li{
-  float: left;
-  margin-right:600px;
-  list-style-type: none;
-}
-
-#user_information {
-  text-align: center;
-  margin: 10px 0;
-  overflow: auto;
-}
-
-#user_information li {
-  text-align: center;
-  list-style-type: none;
-  font-size: 1.5em;
-}
-
-#newnotify{
-  color:#EC7961;
-  font-size: 1em;
-}
 .removestudent{
   float:right;
 }
+
+.pure-menu-children{
+  z-index: 100 !important;
+}
+
 .hover-text {
   color: black;
   margin: 2px 0 0 0px;
@@ -440,7 +284,7 @@ main {
   margin-bottom: 5px;
 }
 
-ul {
+ul, li {
   list-style: none;
 }
 
@@ -449,9 +293,6 @@ ul {
   overflow-y:scroll;
 }
 
-/*#videoplayer{
-  width: 100%
-}*/
 #headline {
   text-align: center;
   margin:0;
@@ -470,3 +311,25 @@ ul {
   text-align: center;
 }
 
+.pure-table{
+  color:#EEEEEE;
+}
+
+.button-secondary {
+  background: rgb(66, 184, 221); /* this is a light blue */
+  margin: 0%;
+  padding: .25%
+}
+.button-warning {
+  background: rgb(223, 117, 20); /* this is an orange */
+  float: right;
+}
+
+#active_users_card, #most_commented, #comments_card{
+  background-color:white
+}
+
+#enrollment-form-container{
+  margin-bottom: 5%;
+  text-align: center
+}

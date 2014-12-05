@@ -1,0 +1,25 @@
+<table class="pure-table" style:"margin-top:50px">
+	<tbody>
+		<% comments.each do |comment| %>
+		<tr>
+			<td>
+			<button class="pure-button">
+					<%= link_to user_path(comment.user), multipart: true do %>
+					<img class="student_image img-circle" src="<%=comment.user.photo%>">
+					<%= comment.user.name %> 
+					<% end %>
+				</button>
+			</td>
+			<td style:"color:white">
+				<%= render partial: '/comments/hashtag_rendering', locals: {body: comment.body} %></td>
+				<td>
+					<a 
+					data-story="<%= comment.sentence.paragraph.story.id %>"
+					data-sentence-link="<%= comment.sentence.story_sentence%>" 
+					href="/stories/<%= comment.sentence.paragraph.story.id %>/#<%= comment.sentence.story_sentence%>">
+					Sentence <%= comment.sentence.story_sentence %>
+				</a> of <%= comment.story.title %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>

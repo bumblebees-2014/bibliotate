@@ -1,12 +1,17 @@
-<h1 id="profile_header">My Profile</h1>
-<div class="card_profile">
-  <h1 id="profile_username"><%= @user.name %></h1>
-  <img class="profile_pic img-circle" src="<%= @user.photo  %>">
-  <ul id="user_information">
-    <li><%= @user.email  %></li>
-    <li><%= @user.role  %></li>
-  </ul>
-<% if current_user.id == @user.id%>
-  <%= link_to 'Delete account', user_path(current_user), method: 'delete', data: {confirm: 'NOTICE: All data associated with this user will be lost. Are you sure? '} %>
-<% end %>
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="http://purecss.io/combo/1.17.27?/css/layouts/marketing.css">
+<div class="splash-container" style="margin-top:38px">
+	<div class="splash" style:"background-color=#1f8dd6">
+		<img class="profile_pic img-circle" src="<%= @user.photo  %>">
+		<p class="splash-subhead">
+			<%= @user.email  %>
+		</p>
+		<p>
+			<% if current_user.id == @user.id%>
+
+			<%= link_to 'Delete account', user_path(current_user), method: 'delete', :class => "pure-button pure-button-primary", data: {confirm: 'NOTICE: All data associated with this user will be lost. Are you sure? '} %>
+			<% end %>
+		</p>
+	</div>
 </div>

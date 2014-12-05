@@ -1,5 +1,7 @@
-$( document ).ready(function() {
-  $(".dropdown.open").on('click', function() {
+$(document).on('page:change', function() {
+  $(".pure-menu-children").on('click', function() {
+    console.log($(this))
+    console.log("fire")
     $(".dropdown-menu").toggle()
     $.ajax({
       url: '/notifications',

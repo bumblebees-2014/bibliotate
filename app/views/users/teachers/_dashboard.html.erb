@@ -1,12 +1,36 @@
-<h1>Welcome, <%= current_user.name %></h1>
-<h4><%= current_user.role.capitalize %></h4>
-
-  <%= render partial: '/users/teachers/all_courses' %>
-  <% current_user.taught_courses.each do |course| %>
-  	<% if course.stories.size > 0 %>
-      <%= render partial: '/users/teachers/all_stories',  locals: {stories: course.stories} %>
-  	  <%= render partial: '/stories/comments_feed',  locals: {story: course.stories.first} %>
+<% if current_user.taught_courses.size == 0 %>
+    <div class="card"> 
+        <div style="margin: 5%">
+            <button class="pure-button"<a href="/courses/new">No Courses Yet, Add One!
+                <i class="fa fa-graduation-cap"></i>
+            </a></button>
+        </div>
+    </div>
+    <% else %>
+    <% current_user.taught_courses.each do |course| %>
+        <div data-id=<%=course.id%> class="card">
+            <div data-id=<%=course.id%> class="pure-menu pure-menu-open pure-menu-horizontal">
+                <ul data-id=<%=course.id%>>
+                    <li data-id=<%=course.id%> class="student_roster_link pure-menu-selected"><a href="#"><%=course.name%></a></li>
+                    <li data-id=<%=course.id%> class="stories_link"><a href="">Stories</a></li>
+                    <li data-id=<%=course.id%> class="recent_comments_link"><a href="">Recent Comments</a></li>
+                    <li ><%= button_to "Delete this course", course_path(id: course.id), method: :delete, data: {confirm: 'NOTICE: This course will be deleted. Are you sure? '}, class: "pure-button button-error" %></li>
+                </ul>
+            </div>
+            <div class="class_info" data-id=<%=course.id%> id="class_info<%=course.id%>">
+                <div class="student_roster" data-id=<%=course.id%>>
+                    <%= render partial: '/users/teachers/all_students', locals: {students: course.users, course_id: course.id}  %>
+                </div>
+                <% if course.stories.size > 0 %>
+                <div data-id=<%=course.id%> class="stories_for_class" style="display: none;"><%= render partial: '/users/teachers/all_stories',  locals: {stories: course.stories} %>
+                </div>
+                <div data-id=<%=course.id%> class="comments_for_stories" style="display: none;"><%= render partial: '/users/teachers/teacher_comments_feed',  locals: {comments: course.recent_comments} %></div>
+                <% else %>
+                <div data-id=<%=course.id%> class="stories_for_class" style="display: none; margin: 5%" >
+                    <a href="/stories/new">No Stories Yet, Add One! </a>
+                </div>
+                <% end %>
+            </div>
+        </div>
     <% end %>
-  <% end %>
-
-
+<% end %>
