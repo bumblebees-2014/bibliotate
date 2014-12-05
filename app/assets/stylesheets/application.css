@@ -21,10 +21,6 @@ body {
   padding: 0 10px 10px;
 }
 
-
-/* NAVIGATION PARTIAL --------------------------------- */
-
-
 /* STORY PAGE --------------------------------- */
 
 .commented{
@@ -321,12 +317,14 @@ ul, li {
 
 .button-secondary {
   background: rgb(66, 184, 221); /* this is a light blue */
+  margin: 0%;
+  padding: .25%
 }
 .button-warning {
   background: rgb(223, 117, 20); /* this is an orange */
   float: right;
 }
 
-#active_users_card, #most_commented{
+#active_users_card, #most_commented, #comments_card{
   background-color:white
 }

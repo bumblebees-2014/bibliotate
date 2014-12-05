@@ -1,13 +1,29 @@
+
 <div data-card="commentsfeed" data-story="<%=story.id%>" class="card comment_card" id="comments_card">
-	<% story.newest_comments.each do |comment| %>
-			<%= render partial: '/comments/render_comment', locals: {comment: comment} %>
-			
-				<a 
-				data-story="<%= comment.sentence.paragraph.story.id %>"
-				data-sentence-link="<%= comment.sentence.story_sentence%>" 
-				href="/stories/<%= comment.sentence.paragraph.story.id %>/#<%= comment.sentence.story_sentence%>">
-				on Sentence <%= comment.sentence.story_sentence %>
-			</a>
-	<br>
-	<% end %>
-</div>
+	<table class="pure-table" style:"margin-top:50px">
+		<tbody>
+			<% story.newest_comments.each do |comment| %>
+			<tr>
+				<td>
+					<button class="pure-button">
+						<%= link_to user_path(comment.user), multipart: true do %>
+						<img class="student_image img-circle" src="<%=comment.user.photo%>">
+						<%= comment.user.name %> 
+						<% end %>
+					</button>
+				</td>
+				<td style="color:grey">
+					<%= render partial: '/comments/hashtag_rendering', locals: {body: comment.body} %></td>
+					<td>
+						<button class="pure-button button-secondary"><a 
+							data-story="<%= comment.sentence.paragraph.story.id %>"
+							data-sentence-link="<%= comment.sentence.story_sentence%>" 
+							href="/stories/<%= comment.sentence.paragraph.story.id %>/#<%= comment.sentence.story_sentence%>">
+							on Sentence <%= comment.sentence.story_sentence %>
+						</a></td></button>
+
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
