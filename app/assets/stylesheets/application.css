@@ -2,7 +2,7 @@
 *= require normalize-rails
 *= require_tree*/
 
-@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(https://weloveiconfonts.com/api/?family=entypo);
 
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
