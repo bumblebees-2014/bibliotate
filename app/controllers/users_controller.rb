@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
   def callback
     #Gets the Access Token for the User Signed In and Stores it
-    access_token = client.auth_code.get_token(params[:code], :redirect_uri => 'https://bibliotate.herokuapp.com/callback')
+    access_token = client.auth_code.get_token(params[:code], :redirect_uri => 'http://localhost:3000/callback')
     #Stores all the Information that Google Sends Back In Variable For Later Use
     response = access_token.get('https://www.googleapis.com/oauth2/v1/userinfo?alt=json')
     #Gets the Info Specifically About the signed in User
@@ -50,7 +50,7 @@ class UsersController < ApplicationController
     user_token = current_user.oauthtoken
     current_user.destroy
     session.clear
-    # This line should goto google and remove our privlidges.
+    # This line should goto google and remove our privileges.
     # redirect_to 'https://accounts.google.com/o/oauth2/revoke?token={#{user_token}}'
     redirect_to '/'
   end

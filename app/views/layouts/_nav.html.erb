@@ -1,74 +1,83 @@
-<section id="top">
+<script>
+  YUI({
+    classNamePrefix: 'pure'
+  }).use('gallery-sm-menu', function (Y) {
 
-      <header>
-        <nav></nav>
-        <section id="logo">
-          <a href="/">
-            <span><i class="fa fa-book"></i>Bibliotate</span>
-          </a>
-        </section>
+    var horizontalMenu = new Y.Menu({
+      container         : '.pure-menu',
+      sourceNode        : '#std-menu-items',
+      orientation       : 'horizontal',
+      resultTextLocator : 'tags',
+      hideOnOutsideClick: false,
+      hideOnClick       : false
+    });
 
-        <% if current_user == nil %>
+    horizontalMenu.render();
+    horizontalMenu.show();
 
-          <section id="login_box">
-            <a href="/auth">
-              <section id="google_plus"><i class="fa fa-google-plus"></i></section>
-            </a>
-            <span id="login_with_text">Login With</span>
-          </section>
+  });
+</script>
+<div class="pure-menu pure-menu-open pure-menu-horizontal">
+  <ul id="std-menu-items">
+    <li><a href="/">Home</a></li>
+    <% if current_user == nil %>
+    <li>
+      <%= link_to  auth_path do %>
+      <img src="https://developers.google.com/+/images/branding/sign-in-buttons/Red-signin_Long_base_44dp.png" style="width: 182px; height: 40px; ">
+      <% end  %>
+    </li>
+    <% elsif current_user.role == "teacher" %>
+    <li>
+      <%= link_to "#{current_user.name}", user_path(current_user) %>
+    </li>
 
-        <% elsif current_user.role == "teacher" %>
-          <section id="login_box">
-            <%= link_to  logout_path, :method => 'post' do %>
-              <section id="google_plus"><i class="fa fa-google-plus"></i></section>
-            <% end  %>
-            <span id="login_with_text">Logout With</span>
-          </section>
+    <li>
+      <a href="/stories/new">Story+ <span id="book_icon" class="entypo-book-open"></span></a>
+    </li>
 
-          <section id="notification_partial">
-            <%= render partial: "users/notification", :locals => {:notifications => current_user.notifications.limit(5).order(created_at: :desc)} %>
-          </section>
+    <li>
+      <a href="/courses/new">Course+ <span id="course_icon" class="entypo-doc-text"></span></i></a>
+    </li>
 
-          <section id="nav-name">
-            <%= link_to "#{current_user.name}", user_path(current_user) %>
-          </section>
+    <li>
+      <a href="/hashtags">Trending <span id="book_icon" class="entypo-book-open"></span></a>
+    </li>
+<!-- #should be in seperate partial -->
+    <% if current_user.has_new_notification? %> 
+    <li id="notifications_new">
+     <a href="#">Notifications</a>
+     <%= render partial: "users/notification", :locals => {:notifications => current_user.notifications.limit(5).order(created_at: :desc)} %>
+   </li>
+   <% else %> 
+   <li id="notifications">
+     <a href="#">Notifications</a>
+     <%= render partial: "users/notification", :locals => {:notifications => current_user.notifications.limit(5).order(created_at: :desc)} %>
+   </li>
+   <% end %> 
 
+   <li>
+    <%= link_to  logout_path, :method => 'post' do %>
+    Sign Out
+    <% end  %>
+  </li>
+  <% else %>
 
-          <section id="nav-add-story" class="nav_buttons">
-            <a href="/stories/new">Story+ <span id="book_icon" class="entypo-book-open"></span></a>
-          </section>
+  <li>
+    <%= link_to "#{current_user.name}", user_path(current_user) %>
+  </li>
 
-          <section id="nav-teacher" class="nav_buttons">
-            <a href="/courses/new">Course+ <span id="course_icon" class="entypo-doc-text"></span></i></a>
-          </section>
+  <li>
+    <a href="/enrollments/new">Enroll+<span id="book_icon" class="entypo-doc-text"></span></a>
+  </li>
 
-          <section id="nav-view-hashtags" class="nav_buttons">
-            <a href="/hashtags">Trending </a>
-          </section>
- 
-
-        <% else %>
-
-          <section id="login_box">
-            <%= link_to  logout_path, :method => 'post' do %>
-              <section id="google_plus"><i class="fa fa-google-plus"></i></section>
-            <% end  %>
-            <span id="login_with_text">Logout With</span>
-          </section>
-
-          <section id="nav-name">
-            <%= link_to "#{current_user.name}", user_path(current_user) %>
-          </section>
-
-          <section id="nav-student" class="nav_buttons">
-            <a href="/enrollments/new">Enroll+<span id="book_icon" class="entypo-doc-text"></span></a>
-          </section>
-
-          <section id="nav-view-hashtags" class="nav_buttons">
-            <a href="/hashtags">Trending <span id="book_icon" class="entypo-book-open"></span></a>
-          </section>
-
-        <% end %>
-      </header>
-</section>
-
+  <li>
+    <a href="/hashtags">Trending <span id="book_icon" class="entypo-book-open"></span></a>
+  </li>
+  <li>
+    <%= link_to  logout_path, :method => 'post' do %>
+    Sign Out
+    <% end  %>
+  </li>
+  <% end %>  
+</ul>
+</div>

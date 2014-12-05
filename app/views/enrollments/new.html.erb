@@ -1,8 +1,7 @@
 <div id="enrollment-form-container">
 
-<h1>Enroll in a course</h1>
+<h2>Enroll in a course</h2>
   <%= form_for :enrollment, url: enrollments_path, method: :post do |f| %>
-
     <div>
       <% @courses.each do |course| %>
         <%= f.label :course, "#{course.name}" %>
@@ -11,7 +10,7 @@
     </div>
 
     <div>
-      <%= f.submit "Select Course" %>
+      <%= f.submit "Select Course", class:"pure-button pure-button-primary" %>
     </div>
 
     <% end %>

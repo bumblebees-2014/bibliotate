@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def destroy
-    session.clear
+    session.destroy
     flash[:error] = "Toodles."
     redirect_to '/'
   end
