@@ -19,4 +19,14 @@ class User < ActiveRecord::Base
     self.role.downcase == "teacher"
   end
 
+  def has_new_notification?
+    if self.notifications.length > 0 
+      self.notifications.last.status
+    else
+      false
+    end
+    
+  end
+
+
 end

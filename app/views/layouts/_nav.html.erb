@@ -7,6 +7,7 @@
       container         : '.pure-menu',
       sourceNode        : '#std-menu-items',
       orientation       : 'horizontal',
+      resultTextLocator : 'tags',
       hideOnOutsideClick: false,
       hideOnClick       : false
     });
@@ -41,11 +42,18 @@
     <li>
       <a href="/hashtags">Trending <span id="book_icon" class="entypo-book-open"></span></a>
     </li>
-
-    <li id="notifications">
+<!-- #should be in seperate partial -->
+    <% if current_user.has_new_notification? %> 
+    <li id="notifications_new">
      <a href="#">Notifications</a>
      <%= render partial: "users/notification", :locals => {:notifications => current_user.notifications.limit(5).order(created_at: :desc)} %>
    </li>
+   <% else %> 
+   <li id="notifications">
+     <a href="#">Notifications</a>
+     <%= render partial: "users/notification", :locals => {:notifications => current_user.notifications.limit(5).order(created_at: :desc)} %>
+   </li>
+   <% end %> 
 
    <li>
     <%= link_to  logout_path, :method => 'post' do %>

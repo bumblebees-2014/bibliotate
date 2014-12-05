@@ -46,4 +46,17 @@ class Notification < ActiveRecord::Base
     end
   end
 
+  def note_path
+      downcased_noteable_type = self.noteable_type.downcase
+    if downcased_noteable_type == "comment"
+       story_id = Comment.find(self.noteable_id).story.id
+      "/stories/#{story_id}"
+    else
+        user_id = User.find(Enrollment.find(self.noteable_id).user_id).id
+       "/users/#{user_id}"      
+    end
+
+  end
+
+
 end
