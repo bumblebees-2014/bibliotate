@@ -1,0 +1,27 @@
+<div data-id=<%=story.id%> class="card">
+	<div data-story=<%=story.id%> class="pure-menu pure-menu-open pure-menu-horizontal">
+		<ul data-id=<%=story.id%>>
+			<li data-id=<%=story.id%> class="student_roster_link pure-menu-selected"></li>
+			<li data-id=<%=story.id%> class="stories_link"><a href="">Stories</a></li>
+			<li data-id=<%=story.id%> class="recent_comments_link"><a href="">Recent Comments</a></li>
+			<li ><%= button_to "Delete this story", story_path(id: story.id), method: :delete, data: {confirm: 'NOTICE: This story will be deleted. Are you sure? '}, class: "pure-button button-error" %></li>
+		</ul>
+	</div>
+	<div class="class_info" data-id=<%=story.id%> id="class_info<%=story.id%>">
+		<div class="student_roster" data-id=<%=story.id%>>
+			<%= render partial: 'comments_feed', locals: {story: @story} %>
+		</div>
+		<div data-id=<%=story.id%> class="stories_for_class" style="display: none;">
+			<%= render partial: 'most_commented', locals: {story: @story} %>
+		</div>
+		<div data-id=<%=story.id%> class="comments_for_stories" style="display: none;">
+			<%= render partial: 'active_users', locals: {story: @story} %>
+		</div>
+		<% else %>
+		<div data-id=<%=story.id%> class="stories_for_class" style="display: none; margin: 5%" >
+			<a href="/stories/new">No Stories Yet, Add One! </a>
+		</div>
+	</div>
+	<% end %>
+</div>
+<% end %>

@@ -1,5 +1,4 @@
 $(document).ready(function() {	
-
 	$(".stories_link").on('click',function(e){
 		e.preventDefault();
 		var localId = $(this).data("id") 
@@ -34,4 +33,7 @@ $(document).ready(function() {
 		current_card.children[1].style.display = "none"
 		current_card.children[2].style.display = "block"
 	})
+
+	
+
 });
