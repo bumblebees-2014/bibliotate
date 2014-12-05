@@ -14,6 +14,7 @@
 body {
   background-image: url('lightpaperfibers.png');
   background-repeat: repeat;
+  background-color: 
 }
 
 .container-fluid {
@@ -321,5 +322,11 @@ ul, li {
 .button-secondary {
   background: rgb(66, 184, 221); /* this is a light blue */
 }
+.button-warning {
+  background: rgb(223, 117, 20); /* this is an orange */
+  float: right;
+}
 
-/* visited link */
+#active_users_card, #most_commented{
+  background-color:white
+}

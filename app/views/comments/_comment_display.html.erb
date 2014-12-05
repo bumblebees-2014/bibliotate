@@ -1,6 +1,6 @@
 <div class="popup">
   <h3>What are people saying?</h3>
-  <button data-comment="remove" class="pure-button button-error button-small">X</button>
+  <button data-comment="remove" class="pure-button button-warning button-small">X</button>
   <ul data-comment="display" class="comment_display">
     <% @comments.each do |comment| %>
       <li><%= render partial: '/comments/render_comment', locals: {comment: comment} %></li>
