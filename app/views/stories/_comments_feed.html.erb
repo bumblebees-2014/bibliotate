@@ -1,18 +1,13 @@
 <div data-card="commentsfeed" data-story="<%=story.id%>" class="card comment_card" id="comments_card">
 	<% story.newest_comments.each do |comment| %>
-	<div data-story=<%=story.id%> class="pure-menu pure-menu-open pure-menu-horizontal">
-		<ul>
-			<li><%= render partial: '/comments/render_comment', locals: {comment: comment} %>
-				  </li>
-				<li style="margin-top:8%"> 
+			<%= render partial: '/comments/render_comment', locals: {comment: comment} %>
+			
 				<a 
 				data-story="<%= comment.sentence.paragraph.story.id %>"
 				data-sentence-link="<%= comment.sentence.story_sentence%>" 
 				href="/stories/<%= comment.sentence.paragraph.story.id %>/#<%= comment.sentence.story_sentence%>">
-				Sentence <%= comment.sentence.story_sentence %>
-			</a></li>
-		</ul>
-	</div>
+				on Sentence <%= comment.sentence.story_sentence %>
+			</a>
 	<br>
 	<% end %>
 </div>
