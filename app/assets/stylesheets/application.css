@@ -328,3 +328,8 @@ ul, li {
 #active_users_card, #most_commented, #comments_card{
   background-color:white
 }
+
+#enrollment-form-container{
+  margin-bottom: 5%;
+  text-align: center
+}

@@ -2,7 +2,6 @@
 	<% if notifications.length >= 1 && notifications.first.status == true%>
 		<li><i class="fa fa-plus" id="newnotify"></i></li>
 	<% end %>
-
 	<% notifications.each do |notification| %>
 		<% if notification.note_sentence != "Notification Removed"%>
 			<li data-work="yes"> <%=notification.note_sentence%></li>
