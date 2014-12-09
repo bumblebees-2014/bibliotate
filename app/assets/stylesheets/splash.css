@@ -11,3 +11,27 @@
 	font-family: 'sans-Serif', serif;
 	font-size: 5em	
 }
+
+@media (max-width: 567px) {
+  .splash_rework {
+    width: 100%;
+  }
+  .info-table-list {
+    width: 100%;
+    display: inline-block;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .pure-menu li {
+	display: inline-block;
+	border: none
+
+  }
