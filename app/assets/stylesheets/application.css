@@ -1,4 +1,4 @@
-/**= require_self
+z/**= require_self
 *= require normalize-rails
 *= require_tree*/
 
@@ -338,5 +338,18 @@ ul, li {
   margin-bottom: 2%;
 }
 
+.pure-menu-item {
+  background-color: lightgreen;
+}
 
+
+.splash-container > .splash  {
+  margin-top: 0px;
+  padding: 0px;
+  position: fixed ;
+  text-align: center;
+  text-transform: uppercase;
+  height: 75%;
+  overflow-y:scroll;
+}
 

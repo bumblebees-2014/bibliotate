@@ -2,7 +2,6 @@
 	<% notifications.each do |notification| %>
 		<% if notification.note_sentence != "Notification Removed"%>
 			<li><a href=<%=notification.note_path%>> <%=notification.note_sentence%></a></li>
-
 		<% end %>
 	<% end %>
 </ul>
