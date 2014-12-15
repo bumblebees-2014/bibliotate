@@ -1,4 +1,4 @@
-/**= require_self
+z/**= require_self
 *= require normalize-rails
 *= require_tree*/
 
@@ -134,6 +134,7 @@ body {
 .student_image {
   max-width: 50px;
   max-height: 50px;
+  border-radius: 5px
 }
 
 .storycreate h2 {
@@ -338,5 +339,30 @@ ul, li {
   margin-bottom: 2%;
 }
 
+/*.pure-menu-item {
+    background-color: lightgreen;
+}
+*/
 
+.splash-container > .splash  {
+  margin-top: 0px;
+  padding: 0px;
+  position: fixed ;
+  text-align: center;
+  text-transform: uppercase;
+  height: 75%;
+  overflow-y:scroll;
+}
+.footer {
+    background: #111;
+    color: #888;
+    text-align: center;
+}
+    .footer a {
+        color: #ddd;
+    }
+
+.l-box {
+    padding: 0.5em 2em;
+}
 
