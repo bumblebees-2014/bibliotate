@@ -1,22 +1,3 @@
-<script>
-  YUI({
-    classNamePrefix: 'pure'
-  }).use('gallery-sm-menu', function (Y) {
-
-    var horizontalMenu = new Y.Menu({
-      container         : '.pure-menu',
-      sourceNode        : '#std-menu-items',
-      orientation       : 'horizontal',
-      resultTextLocator : 'tags',
-      hideOnOutsideClick: false,
-      hideOnClick       : false
-    });
-
-    horizontalMenu.render();
-    horizontalMenu.show();
-
-  });
-</script>
 <div class="pure-menu pure-menu-open pure-menu-horizontal">
   <ul id="std-menu-items">
     <li><a href="/">Home</a></li>

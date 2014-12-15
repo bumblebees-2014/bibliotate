@@ -339,10 +339,10 @@ ul, li {
   margin-bottom: 2%;
 }
 
-.pure-menu-item {
-  background-color: lightgreen;
+/*.pure-menu-item {
+    background-color: lightgreen;
 }
-
+*/
 
 .splash-container > .splash  {
   margin-top: 0px;
@@ -365,3 +365,4 @@ ul, li {
 .l-box {
     padding: 0.5em 2em;
 }
+
