@@ -134,6 +134,7 @@ body {
 .student_image {
   max-width: 50px;
   max-height: 50px;
+  border-radius: 5px
 }
 
 .storycreate h2 {
@@ -352,4 +353,15 @@ ul, li {
   height: 75%;
   overflow-y:scroll;
 }
+.footer {
+    background: #111;
+    color: #888;
+    text-align: center;
+}
+    .footer a {
+        color: #ddd;
+    }
 
+.l-box {
+    padding: 0.5em 2em;
+}
