@@ -21,7 +21,7 @@ class StoryfileUploader < CarrierWave::Uploader::Base
     # For Rails 3.1+ asset pipeline compatibility:
     # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
 
-    "http://electriciantraining.tpub.com/14184/img/14184_56_1.jpg"
+    "http://www.wpclipart.com/education/books/books_2/large_open_book.png"
   end
 
   # Process files as they are uploaded:
