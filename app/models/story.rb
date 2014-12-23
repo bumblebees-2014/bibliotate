@@ -24,6 +24,7 @@ class Story < ActiveRecord::Base
   def newest_comments
     comments.first(5)
   end
+  
     # This ruby should be replaced by activerecord query
   def most_commented
     sentences.sort_by {|sentence| sentence.comment_count}.reverse[0..4]
