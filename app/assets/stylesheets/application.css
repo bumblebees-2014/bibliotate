@@ -1,4 +1,11 @@
 /**= require_self
+
+*= require purecss/base
+*= require purecss/buttons
+*= require purecss/forms
+*= require purecss/grids
+*= require purecss/menus
+*= require purecss/tables 
 *= require normalize-rails
 *= require_tree*/
 
@@ -148,10 +155,10 @@ body {
 }
 
 #story_text_file {
-  margin-left: 10%
+  /*margin-left: 10%*/
 }
 #story_file {
-  margin-left: 16%
+  /*margin-left: 16%*/
 }
 
 .button-secondary {
