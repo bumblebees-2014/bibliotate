@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'yui-rails'
 gem 'purecss-rails'
+gem "font-awesome-rails"
 
 gem 'carrierwave'
 gem 'pdf-reader'

@@ -1,19 +1,13 @@
 /**= require_self
 
-*= require purecss/base
 *= require purecss/buttons
 *= require purecss/forms
 *= require purecss/grids
+*= require purecss/grids-responsive
 *= require purecss/menus
-*= require purecss/tables 
 *= require normalize-rails
+*= require font-awesome
 *= require_tree*/
-
-@import url(http://weloveiconfonts.com/api/?family=entypo);
-
-[class*="entypo-"]:before {
-  font-family: 'entypo', sans-serif;
-}
 
 
 /* PAGE BODY --------------------------------- */
