@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'yui-rails'
+gem 'purecss-rails'
+
 gem 'carrierwave'
 gem 'pdf-reader'
 
@@ -7,7 +10,7 @@ gem 'rails_12factor'
 gem 'unicorn'
 gem 'oauth2'
 gem 'dotenv'
-gem 'doorkeeper'
+gem 'doorkeeper', '~> 1.4.1'
 gem 'normalize-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
