@@ -1,10 +1,7 @@
 $(document).on('page:change', function() {
-// pure-menu pure-menu-open pure-menu-horizontal
-
 YUI({
   classNamePrefix: 'pure'
 }).use('gallery-sm-menu', function (Y) {
-
   var horizontalMenu = new Y.Menu({
     container         : '.pure-menu',
     sourceNode        : '#pure-menu-items',
@@ -12,10 +9,8 @@ YUI({
     hideOnOutsideClick: false,
     hideOnClick       : false
   });
-
   horizontalMenu.render();
   horizontalMenu.show();
-
 });
 $(".pure-menu-children").on("hover", function(e) {
   if (e.type == "mouseenter") {
