@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-# gem 'yui-rails'
 gem 'purecss-rails'
 gem "font-awesome-rails"
 
