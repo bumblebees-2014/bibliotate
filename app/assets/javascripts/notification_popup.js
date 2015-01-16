@@ -1,41 +1,33 @@
 $(document).on('page:change', function() {
-YUI({
-  classNamePrefix: 'pure'
-}).use('gallery-sm-menu', function (Y) {
-  var horizontalMenu = new Y.Menu({
-    container         : '.pure-menu',
-    sourceNode        : '#pure-menu-items',
-    orientation       : 'horizontal',
-    hideOnOutsideClick: false,
-    hideOnClick       : false
-  });
-  horizontalMenu.render();
-  horizontalMenu.show();
-});
-$(".pure-menu-children").on("hover", function(e) {
-  if (e.type == "mouseenter") {
-    console.log("one");   
-      // $.ajax({
-      //   url: '/notifications',
-      //   type: 'POST',
-      // })
-      // .success(function() {
+  if(document.getElementById("notifications_new")){
+    var noteName = document.getElementById("notifications_new")
+  } else {
+    var noteName = document.getElementById("notifications")
+  };
 
-      // });
+  $(noteName).hover(function(e) {
+    e.preventDefault()
+    updateStatus()
+    var noteList = document.getElementById("notification_list")
+    if (e.type == "mouseenter") {
+      noteList.style.display="block"
+      console.log("one");   
+      } else { 
+        noteList.style.display="none"
+        console.log("two");   
+      }
+    });
+
+  function updateStatus(argument) {
+    console.log("fireupdate")
+  //   $.ajax({
+  //     url: '/notifications',
+  //     type: 'POST',
+  //   })
+  //   .success(function() {
+
+  //   });
+  // }
 }
-else { 
-  console.log("two");   
-}
-});
 })
 
-var getStatus = function(){
-  var pureMenuItem = document.getElementsByClassName("pure-menu pure-menu-open pure-menu-horizontal")
-  var statusItem = pureMenuItem.item()
-  if (statusItem.dataset.statusItem == "true") {
-    return true    
-  } else {
-    return false  
-  }
-
-}

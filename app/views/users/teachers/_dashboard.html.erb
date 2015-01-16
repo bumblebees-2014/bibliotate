@@ -9,12 +9,12 @@
     <% else %>
     <% current_user.taught_courses.each do |course| %>
         <div data-id=<%=course.id%> class="card">
-            <div data-id=<%=course.id%> class="pure-menu pure-menu-open pure-menu-horizontal">
+            <div data-id=<%=course.id%> class="pure-menu pure-menu-open pure-menu-horizontal" id="test-menu">
                 <ul data-id=<%=course.id%>>
                     <li data-id=<%=course.id%> class="student_roster_link pure-menu-selected"><a href="#"><%=course.name%></a></li>
                     <li data-id=<%=course.id%> class="stories_link"><a href="">Stories</a></li>
                     <li data-id=<%=course.id%> class="recent_comments_link"><a href="">Recent Comments</a></li>
-                    <li ><%= button_to "Delete this course", course_path(id: course.id), method: :delete, data: {confirm: 'NOTICE: This course will be deleted. Are you sure? '}, class: "pure-button button-error" %></li>
+                    <li ><%= button_to "Delete this course", course_path(id: course.id), method: :delete, data: {confirm: 'NOTICE: This course will be deleted. Are you sure? '}, class: "pure-button button-class" %></li>
                 </ul>
             </div>
             <div class="class_info" data-id=<%=course.id%> id="class_info<%=course.id%>">
