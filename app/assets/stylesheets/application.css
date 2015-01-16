@@ -356,16 +356,16 @@ ul, li {
   overflow-y:scroll;
 }
 .footer {
-    background: #111;
-    color: #888;
-    text-align: center;
+  background: #111;
+  color: #888;
+  text-align: center;
 }
-    .footer a {
-        color: #ddd;
-    }
+.footer a {
+  color: #ddd;
+}
 
 .l-box {
-    padding: 0.5em 2em;
+  padding: 0.5em 2em;
 }
 
 
@@ -388,3 +388,6 @@ ul, li {
   z-index: 1000  !important; 
 }
 
+.button-user {
+  background: #FDF505
+}
