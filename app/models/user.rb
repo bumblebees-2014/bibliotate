@@ -21,11 +21,10 @@ class User < ActiveRecord::Base
 
   def has_new_notification?
     if self.notifications.length > 0 
-      self.notifications.last.status
+      self.notifications.first.status
     else
       false
     end
-    
   end
 
 
