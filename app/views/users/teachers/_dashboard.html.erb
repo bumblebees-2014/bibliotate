@@ -1,9 +1,10 @@
 <% if current_user.taught_courses.size == 0 %>
     <div class="card"> 
         <div style="margin: 5%">
-            <button class="pure-button"<a href="/courses/new">No Courses Yet, Add One!
+            <button class="pure-button">
+                <%= link_to 'No Courses Yet, Add One!', new_course_path %>
                 <i class="fa fa-graduation-cap"></i>
-            </a></button>
+            </button>
         </div>
     </div>
     <% else %>
