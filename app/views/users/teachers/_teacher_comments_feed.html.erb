@@ -3,7 +3,7 @@
 		<% comments.each do |comment| %>
 		<tr>
 			<td>
-			<button class="pure-button">
+				<button class="pure-button button-user">
 					<%= link_to user_path(comment.user), multipart: true do %>
 					<img class="student_image img-circle" src="<%=comment.user.photo%>">
 					<%= comment.user.name %> 

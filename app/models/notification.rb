@@ -21,14 +21,17 @@ class Notification < ActiveRecord::Base
     end
   end
 
+# must figure out dependent destroy on polymorphic table
   def is_about
     downcased_noteable_type = self.noteable_type.downcase
     if downcased_noteable_type == "comment" 
       if Comment.find(self.noteable_id).sentence == nil
         self.destroy
         "Notification Removed"
-      else  
+      elsif Comment.find(self.noteable_id).sentence.paragraph.story
         Comment.find(self.noteable_id).sentence.paragraph.story.title
+      else
+        "Notification Removed"
       end
     else
       Course.find(Enrollment.find(self.noteable_id).course_id).name

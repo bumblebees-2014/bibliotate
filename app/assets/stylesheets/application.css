@@ -1,19 +1,13 @@
 /**= require_self
 
-*= require purecss/base
 *= require purecss/buttons
 *= require purecss/forms
 *= require purecss/grids
+*= require purecss/grids-responsive
 *= require purecss/menus
-*= require purecss/tables 
 *= require normalize-rails
+*= require font-awesome
 *= require_tree*/
-
-@import url(http://weloveiconfonts.com/api/?family=entypo);
-
-[class*="entypo-"]:before {
-  font-family: 'entypo', sans-serif;
-}
 
 
 /* PAGE BODY --------------------------------- */
@@ -215,6 +209,7 @@ body {
 .button-error {
   background: rgb(202, 60, 60); /* this is a maroon */
   float: right;
+
 }
 .postcomment {
   margin-left: 23%;
@@ -361,15 +356,38 @@ ul, li {
   overflow-y:scroll;
 }
 .footer {
-    background: #111;
-    color: #888;
-    text-align: center;
+  background: #111;
+  color: #888;
+  text-align: center;
 }
-    .footer a {
-        color: #ddd;
-    }
+.footer a {
+  color: #ddd;
+}
 
 .l-box {
-    padding: 0.5em 2em;
+  padding: 0.5em 2em;
 }
 
+
+#notifications_new{
+  background-color: #BCED91
+}
+
+
+
+#test-menu ul button {
+  background-color: red  !important;;
+  z-index: -10  !important;
+}
+
+#notification_list{
+  display: none;
+  position: absolute;
+  background-color: #FFFFFF;
+  margin-top: 26%;
+  z-index: 1000  !important; 
+}
+
+.button-user {
+  background: #FDF505
+}

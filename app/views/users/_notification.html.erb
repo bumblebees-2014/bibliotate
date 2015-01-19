@@ -1,7 +1,9 @@
-<ul id="notification_list">
-	<% notifications.each do |notification| %>
+<div class="pure-menu-open">
+	<ul id="notification_list">
+		<% notifications.each do |notification| %>
 		<% if notification.note_sentence != "Notification Removed"%>
-			<li data-status="<%=notification.status%>"><a href=<%=notification.note_path%>> <%=notification.note_sentence%></a></li>
+		<li data-status="<%=notification.status%>"><a href=<%=notification.note_path%>> <%=notification.note_sentence%></a></li>
 		<% end %>
-	<% end %>
-</ul>
+		<% end %>
+	</ul>
+</div>

@@ -1,11 +1,8 @@
 <% if current_user.has_new_notification? %> 
     <li id="notifications_new">
-     <a href="#">Notifications</a>
-     <%= render partial: "users/notification", :locals => {:notifications => current_user.notifications.limit(5).order(created_at: :desc)} %>
-   </li>
-   <% else %> 
-   <li id="notifications">
-     <a href="#">Notifications</a>
-     <%= render partial: "users/notification", :locals => {:notifications => current_user.notifications.limit(5).order(created_at: :desc)} %>
-   </li>
-   <% end %> 
+  <% else %> 
+    <li id="notifications">
+<% end %> 
+   <a href="#">Notifications <i class="fa fa-caret-down"></i></a>
+   <%= render partial: "users/notification", :locals => {:notifications => current_user.notifications.limit(5).order(created_at: :desc)} %>
+</li>

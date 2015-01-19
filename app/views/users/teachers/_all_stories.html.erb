@@ -1,12 +1,12 @@
-<ul>
-	<% stories.each do |story| %>
-	<li><%= button_to "Delete Story", story_path(story), :method => :delete, data: {confirm: 'NOTICE: All comments associated with this story will be lost. Are you sure? '}, style:"float:right; margin-top:10px", class:"pure-button button-error" %></li>
-	<br>
-	<li style:"margin-bottom:100px"> 
-		<button class="pure-button">
-			<i class="fa fa-book"></i>/
-			<%= link_to "#{story.title}", story_path(story), style:"" %></li>
-		</button>
-	<% end %>
-</ul>
+<% stories.each do |story| %>
+	<ul>
+		<li><%= button_to "Delete Story", story_path(story), :method => :delete, data: {confirm: 'NOTICE: All comments associated with this story will be lost. Are you sure? '}, style:"float:right; margin-top:10px", class:"pure-button button-error" %>
+		</li>
+		<li> 
+			<button class="pure-button">
+				<i class="fa fa-book"></i>
+				<%= link_to "#{story.title}", story_path(story), style:"" %></li>
+			</button>
+	</ul>
+<% end %>
 

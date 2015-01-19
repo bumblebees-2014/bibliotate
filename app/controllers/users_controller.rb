@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @notifications = Notification.where(user_id:current_user)
+    # @notifications = Notification.where(user_id:current_user)
     @user = User.find(params[:id])
   end
 
