@@ -1,46 +1,11 @@
 $(document).on('page:change', function() {
-	$(".stories_link").on('click',function(e){
+	$(".li_link").on('click',function(e){
 		e.preventDefault();
 		classChange($(this))
 		currentCard = $(this).parents("div").children('.class_info')
 		hideAllCards(currentCard.children())
-		currentCard.children()[1].style.display = "block"
-	})
-
-	$(".student_roster_link").on('click',function(e){
-		e.preventDefault();
-		classChange($(this))
-		currentCard = $(this).parents("div").children('.class_info')
-		hideAllCards(currentCard.children())	
-		currentCard.children()[0].style.display = "block"
-	})
-	$(".recent_comments_link").on('click',function(e){
-		e.preventDefault();
-		classChange($(this))
-		currentCard = $(this).parents("div").children('.class_info')
-		hideAllCards(currentCard.children())
-		currentCard.children()[2].style.display = "block"
-	})
-	$(".commented_sentences_link").on('click',function(e){
-		e.preventDefault();
-		classChange($(this))
-		currentCard = $(this).parents("div").children('.class_info')
-		hideAllCards(currentCard.children())
-		currentCard.children()[1].style.display = "block"
-	})
-	$(".link_to_recent_comments").on('click',function(e){
-		e.preventDefault();
-		classChange($(this))
-		currentCard = $(this).parents("div").children('.class_info')
-		hideAllCards(currentCard.children())
-		currentCard.children()[0].style.display = "block"
-	})
-	$(".frequent_commentors_link").on('click',function(e){
-		e.preventDefault();
-		classChange($(this))
-		currentCard = $(this).parents("div").children('.class_info')
-		hideAllCards(currentCard.children())
-		currentCard.children()[2].style.display = "block"
+		var boxNumber = $(this).data().number
+		currentCard.children()[boxNumber].style.display = "block"
 	})
 
 	var removeDisplay = function(objectFromCard) {

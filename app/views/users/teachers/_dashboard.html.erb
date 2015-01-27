@@ -12,9 +12,9 @@
         <div data-id=<%=course.id%> class="card">
             <div data-id=<%=course.id%> class="pure-menu pure-menu-open pure-menu-horizontal" id="test-menu">
                 <ul data-id=<%=course.id%>>
-                    <li data-id=<%=course.id%> class="student_roster_link pure-menu-selected"><a href="#"><%=course.name%></a></li>
-                    <li data-id=<%=course.id%> class="stories_link"><a href="">Stories</a></li>
-                    <li data-id=<%=course.id%> class="recent_comments_link"><a href="">Recent Comments</a></li>
+                    <li data-number=0 class="li_link pure-menu-selected"><a href="#"><%=course.name%></a></li>
+                    <li data-number=1 class="li_link"><a href="">Stories</a></li>
+                    <li data-number=2 class="li_link"><a href="">Recent Comments</a></li>
                 </ul>
                     <li ><%= button_to "Delete this course", course_path(id: course.id), method: :delete, data: {confirm: 'NOTICE: This course will be deleted. Are you sure? '}, class: "pure-button button-class" %></li>
             </div>

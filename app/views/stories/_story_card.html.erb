@@ -1,9 +1,9 @@
 <div data-id=<%=story.id%> class="card">
 	<div data-story=<%=story.id%> class="pure-menu pure-menu-open pure-menu-horizontal">
 		<ul data-id=<%=story.id%>>
-			<li data-id=<%=story.id%> class="link_to_recent_comments pure-menu-selected"><a href='#'>Recent Comments</a></li>
-			<li data-id=<%=story.id%> class="commented_sentences_link"><a href="">Most Commented Sentences</a></li>
-			<li data-id=<%=story.id%> class="frequent_commentors_link"><a href="">Frequent Commentors</a></li>
+			<li data-id=<%=story.id%> data-number=0 class="li_link pure-menu-selected"><a href='#'>Recent Comments</a></li>
+			<li data-id=<%=story.id%> data-number=1 class="li_link"><a href="">Most Commented Sentences</a></li>
+			<li data-id=<%=story.id%> data-number=2 class="li_link"><a href="">Frequent Commentors</a></li>
 		</ul>
 	</div>
 	<div class="class_info" data-id=<%=story.id%> id="class_info<%=story.id%>">
