@@ -1,9 +1,9 @@
 
 <% if flash[:messages].class == Array %>
   <% flash[:messages].each do |message|%>
-      <p id="message"><%=  message  %></p>
+      <li id="message"><%=  message  %></li>
     <% end %>
-  <% else %>
-      <p id="message"><%=  flash[:messages]  %></p>
+  <% elsif flash[:messages].class == String && flash[:messages] != "" %>
+      <li id="message"><%=  flash[:messages]  %></li>
 <% end %>
   <% flash[:messages] = "" %>
