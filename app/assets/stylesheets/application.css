@@ -358,12 +358,12 @@ ul, li {
 .splash-container > .splash  {
   margin-top: 0px;
   padding: 0px;
-  position: fixed ;
+  /*position: fixed ;*/
   text-align: center;
   text-transform: uppercase;
   height: 75%;
-  overflow-y:scroll;
 }
+
 .footer {
   background: #111;
   color: #888;
