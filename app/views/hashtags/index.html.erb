@@ -1,6 +1,6 @@
   <%= stylesheet_link_tag    'marketing', media: 'all'%>
-<div class="splash-container" style="margin-top:38px">
-	<div class="splash" style:"background-color=#1f8dd6">
+<div class="splash-container">
+	<div class="splash" >
 			<h1>Checkout what's trending!</h1>
 			<% @hashtags.each do |tag|%>
 			<li><%= link_to "#{tag.tag}", hashtag_path(tag) %></li>	

@@ -72,22 +72,32 @@ body {
 .button-xsmall {
   font-size: 75%;
 }
+#showstory{
+  background-color: #FCF9EE;
+  z-index: 10;
+  /*position: fixed;*/
+}
 
-.popup {
+#popup { 
   border: 1px solid rgba(0,0,0,0.15);
   background-color: white;
+  margin-top: 20px;
+  /*background-color: red;*/
   overflow-y: scroll;
   position: fixed;
   top: 7%;
   left: 80%;
-  width: 20%;
-  height: 625px;
+  width: 300px;
+  height: 600px;
+  z-index: -51  ;
+  /*display: none;*/
 }
-.popup h3{
+
+#popup h3{
   text-align: center
 }
 
-.popup textarea {
+#popup textarea {
   width: 95%;
   border: none;
   border-style: none;
@@ -99,6 +109,8 @@ body {
   margin: auto;
   margin-top: 15px;
 }
+
+
 
 .comment_form input {
   margin-left: 40%;
@@ -341,20 +353,17 @@ ul, li {
   margin-bottom: 2%;
 }
 
-/*.pure-menu-item {
-    background-color: lightgreen;
-}
-*/
+
 
 .splash-container > .splash  {
   margin-top: 0px;
   padding: 0px;
-  position: fixed ;
+  /*position: fixed ;*/
   text-align: center;
   text-transform: uppercase;
   height: 75%;
-  overflow-y:scroll;
 }
+
 .footer {
   background: #111;
   color: #888;
@@ -374,7 +383,6 @@ ul, li {
 }
 
 
-
 #test-menu ul button {
   background-color: red  !important;;
   z-index: -10  !important;
@@ -391,3 +399,4 @@ ul, li {
 .button-user {
   background: #FDF505
 }
+ 
