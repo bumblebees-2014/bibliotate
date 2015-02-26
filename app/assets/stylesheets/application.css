@@ -75,7 +75,7 @@ body {
 #showstory{
   background-color: #FCF9EE;
   z-index: 10;
-  /*position: fixed;*/
+  margin: 0px
 }
 
 #popup { 
@@ -400,3 +400,6 @@ ul, li {
   background: #FDF505
 }
  
+#colorkeeper{
+  background-color: #FCF9EE
+}
