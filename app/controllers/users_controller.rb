@@ -18,10 +18,12 @@ class UsersController < ApplicationController
 # Oauth/Signup routes
 
   def auth
+    p "in auth route"
     redirect_to client.auth_code.authorize_url(:redirect_uri => 'https://bibliotate.herokuapp.com/callback',:scope => 'https://www.googleapis.com/auth/userinfo.email',:access_type => "offline")
   end
 
   def callback
+    p "in oauth callback"
     #Gets the Access Token for the User Signed In and Stores it
     access_token = client.auth_code.get_token(params[:code], :redirect_uri => 'https://bibliotate.herokuapp.com/callback')
     #Stores all the Information that Google Sends Back In Variable For Later Use
