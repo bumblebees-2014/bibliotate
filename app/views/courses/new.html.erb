@@ -1,6 +1,6 @@
 <div class="new_course_form">
 	<fieldset>
-		<div class="pure-u-5-6">
+		<div class="pure-u-5-6 pure-form">
 			<%= form_for :course, url: courses_path, method: :post, class:"pure-form pure-form-stacked" do |f| %>
 			<%= f.text_field :name, placeholder: "Course Name", class:"pure-input-1-2"%>
 			<br>
@@ -9,4 +9,4 @@
 			<% end %>
 		</div>
 	</fieldset>
-</div>
+</div>	
