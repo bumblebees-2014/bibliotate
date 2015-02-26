@@ -1,19 +1,19 @@
-<div id="showstory">
-	<h1 id="story_title"><%= @story.title %></h1>
-	<div class="photo-with-caption">
-		<img class="story-photo" src="<%= @story.file %>">
+<div id="colorkeeper">
+	<div id="showstory">
+		<h1 id="story_title"><%= @story.title %></h1>
+		<div class="photo-with-caption">
+			<img class="story-photo" src="<%= @story.file %>">
+		</div>
+		<br>
+		<section id="story_info">
+			By: <span id="author"><%= @story.author %></span>
+		</section>
+		<% @story.paragraphs.each do |paragraph| %>
+		<p class="paragraph"><%= render partial: 'paragraph', locals: {paragraph: paragraph} %></p>
+		<% end %>
+		<%= render partial: 'story_card', locals: {story: @story} %>
+		<div id="popup">
+		</div>
 	</div>
-	<br>
-	<section id="story_info">
-		By: <span id="author"><%= @story.author %></span>
-	</section>
-	<% @story.paragraphs.each do |paragraph| %>
-	<p class="paragraph"><%= render partial: 'paragraph', locals: {paragraph: paragraph} %>
-	</p>
-	<% end %>
+</div>
 
-	<%= render partial: 'story_card', locals: {story: @story} %>
-	<div id="popup">
-	</div>
-</div>
-</div>
