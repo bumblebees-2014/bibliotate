@@ -82,15 +82,15 @@ body {
   border: 1px solid rgba(0,0,0,0.15);
   background-color: white;
   margin-top: 20px;
-  /*background-color: red;*/
+  margin-right: 500px;
   overflow-y: scroll;
   position: fixed;
   top: 7%;
-  left: 80%;
+  left: 76%;
+  /*right:1%;*/
   width: 300px;
   height: 600px;
   z-index: -51  ;
-  /*display: none;*/
 }
 
 #popup h3{
@@ -98,24 +98,24 @@ body {
 }
 
 #popup textarea {
-  width: 95%;
+  width: 100%;
   border: none;
   border-style: none;
   resize: none;
   outline: none;
   overflow: auto;
   border: 1px solid rgba(0,0,0,0.1);
-  display: block;
+  /*display: block;*/
   margin: auto;
   margin-top: 15px;
 }
 
 
 
-.comment_form input {
+/*.comment_form input {
   margin-left: 40%;
 }
-
+*/
 .submit_link {
   color: #7A6A53;
   font-size: 1em;

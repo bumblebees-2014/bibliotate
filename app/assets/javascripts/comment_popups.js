@@ -55,15 +55,15 @@ function popupClose() {
 }
 
 
-    var popup_state = 'closed';
-    
-    $( document ).ready(function() {
-    doc_width = $(document).width();
-    set_showstory_width();
-  });
-  
-  function set_showstory_width()
-  {
+var popup_state = 'closed';
+
+$( document ).ready(function() {
+  doc_width = $(document).width();
+  set_showstory_width();
+});
+
+function set_showstory_width()
+{
     // var doc_width = $(document).width();
     $('#showstory').width(doc_width);
   }
@@ -77,19 +77,23 @@ function popupClose() {
   
   function popup_open()
   {
-  newStoryWidth = doc_width-230+"px"
-  console.log(newStoryWidth)
-    $("#showstory").animate({width : newStoryWidth}, 500, function() {
-    // $("#showstory").animate({ "width": newStoryWidth}, 500, function() {
-      $("#popup").css("z-index", "1");
+    newStoryWidth = doc_width-230+"px"
+      $("#showstory").animate({width : newStoryWidth}, '200', function() {
+        $("#popup").fadeIn('200', function() {
+          var pop = $(this)
+        pop.css("z-index", "1");
+      })
       popup_state = 'open';
     });
   }
   
   function popup_close()
   {
-    $("#popup").css("z-index", "-1");
-    $("#showstory").animate({width: doc_width}, 500);
+    $("#showstory").animate({width: doc_width}, 'slow')
+      $("#popup").fadeOut('slow', function() {
+        $(this).css("z-index", "-1");
+
+    });
     popup_state = 'closed';
   }
   
@@ -100,7 +104,7 @@ function popupClose() {
       popup_close();
       
     } else {
-      
+
       popup_open();
     }
     
