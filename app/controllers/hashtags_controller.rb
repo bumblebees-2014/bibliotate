@@ -1,7 +1,13 @@
 class HashtagsController < ApplicationController
 	def index
 		# This should be revised to avoid duplicate hashtags
-		@hashtags = Hashtag.all
+		@hashtags = []
+		uniq_hashes = Hashtag.all.select(:tag).distinct
+		uniq_hashes.each do |hash|
+			@hashtags << Hashtag.find_by(tag:hash.tag)
+		end
+		@hashtags
+
 	end
 
 	def show
